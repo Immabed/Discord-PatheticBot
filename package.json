@@ -1,6 +1,6 @@
 {
     "name": "PatheticBot",
-    "version": "1.0",
+    "version": "1.0.0",
     "description": "Posts a pic of a duck saying 'pathetic'",
     "main": "bot.js",
     "author": "Brady Coles",
