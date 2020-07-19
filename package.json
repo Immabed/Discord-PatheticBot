@@ -1,11 +1,11 @@
 {
     "name": "PatheticBot",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Posts a pic of a duck saying 'pathetic'",
-    "main": "bot.js",
+    "main": "patheticbot.js",
     "author": "Brady Coles",
     "dependencies": {
-        "discord.js": "^11.6.4",
+        "discord.js": "^12.2.0",
         "winston": "^3.3.3"
     }
 }
