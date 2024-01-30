@@ -1,23 +1,23 @@
 var Discord = require('discord.js');
-var logger = require('winston');
 var auth = require('./auth.json');
 
-// Configure logger settings
-logger.remove(logger.transports.Console);
-logger.add(new logger.transports.Console, {
-    colorize: true
-});
-logger.level = 'debug'; // LOGGER LEVEL
+
 
 // Initialize Discord Bot
-const bot = new Discord.Client();
-bot.on('ready', () => {
-    logger.info('Connected')
-    logger.info('Logged in as: ');
-    logger.info(bot.username + ' - (' + bot.id + ')');
+const bot = new Discord.Client({
+    intents: [
+        Discord.GatewayIntentBits.Guilds,
+        Discord.GatewayIntentBits.GuildMessages,
+        Discord.GatewayIntentBits.MessageContent,
+    ]
 });
-bot.on('message', (message) => {        
-    
+bot.on('ready', () => {
+    console.log('Connected')
+    console.log('Logged in as: ');
+    console.log(bot.user.username + ' - (' + bot.user.id + ')');
+});
+
+bot.on('messageCreate', (message) => {        
     if (!message.author.bot) {
         var re = /(?:^|\W)pathetic(?:$|\W)/gi;
         var match = message.content.match(re);
