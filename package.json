@@ -6,5 +6,8 @@
     "author": "Brady Coles",
     "dependencies": {
         "discord.js": "^14.14.1"
+    },
+    "scripts": {
+    	"start": "node patheticbot.js"
     }
 }
